@@ -5,12 +5,11 @@ def main():
   character_set = count_characters(text)  
   print_report(book_path, num_words, character_set)
 
-def print_report(path, count, character_set):
-  char_to_check = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"}
+def print_report(path, count, character_set):  
   print(f"--- Begin report of {path} ---")
   print(f"{count} words found in the document\n")
   for char in character_set:
-    if char in char_to_check:      
+    if char.isalpha():      
       print(f"The '{char}' character was found {character_set[char]} times")  
   print("--- End report ---")
 
